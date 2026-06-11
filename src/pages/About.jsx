@@ -2,12 +2,13 @@ import PageHero from '../components/PageHero'
 import SectionLabel from '../components/SectionLabel'
 import StepsSection from '../components/StepsSection'
 import { CheckIcon, FeatureIcon } from '../components/Icons'
-import { beliefs, differentiators, stats } from '../data/siteData'
+import { beliefs, differentiators, pageBanners, stats } from '../data/siteData'
 
 export default function About() {
   return (
     <>
       <PageHero
+        banner={pageBanners.about}
         label="About Us"
         title="Bespoke websites for UK small businesses"
         highlight="small businesses"

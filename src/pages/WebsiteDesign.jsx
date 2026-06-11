@@ -3,14 +3,24 @@ import SectionLabel from '../components/SectionLabel'
 import QuoteSection from '../components/QuoteSection'
 import StepsSection from '../components/StepsSection'
 import { CheckIcon, FeatureIcon } from '../components/Icons'
-import { websiteIncludes, whatYouGet } from '../data/siteData'
+import { pageBanners, websiteIncludes, whatYouGet } from '../data/siteData'
 
 export default function WebsiteDesign() {
   return (
     <>
       <PageHero
+        banner={pageBanners.services}
         label="Website Design"
-        title="Affordable websites for UK small businesses from £200"
+        lines={[
+          { text: 'Affordable websites for UK' },
+          {
+            parts: [
+              { text: 'small businesses ', className: 'text-emerald-400' },
+              { text: 'from ' },
+              { text: '£200', className: 'text-emerald-400' },
+            ],
+          },
+        ]}
         description="Mobile-first, fast loading and built to bring in enquiries. SEO, copy and free business email all included."
         cta="Get My Free Quote"
         ctaTo="/contact"

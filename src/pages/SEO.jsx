@@ -1,15 +1,24 @@
 import PageHero from '../components/PageHero'
 import QuoteSection from '../components/QuoteSection'
 import { CheckIcon } from '../components/Icons'
-import { seoFeatures } from '../data/siteData'
+import { pageBanners, seoFeatures } from '../data/siteData'
 
 export default function SEO() {
   return (
     <>
       <PageHero
+        banner={pageBanners.seo}
         label="SEO Services"
-        title="Get found on Google by local customers"
-        highlight="Google"
+        parts={[
+          { text: 'Get found on ' },
+          { text: 'G', className: 'text-[#4285F4]' },
+          { text: 'o', className: 'text-[#EA4335]' },
+          { text: 'o', className: 'text-[#FBBC05]' },
+          { text: 'g', className: 'text-[#4285F4]' },
+          { text: 'l', className: 'text-[#34A853]' },
+          { text: 'e', className: 'text-[#EA4335]' },
+          { text: ' by local customers' },
+        ]}
         description="Local SEO that helps tradesmen, beauty salons, barbers and small businesses rank for the searches that bring real enquiries."
         cta="Get My Free Quote"
         ctaTo="/contact"

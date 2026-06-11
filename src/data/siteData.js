@@ -1,3 +1,11 @@
+export const pageBanners = {
+  about: '/about.png',
+  services: '/services.png',
+  seo: '/SEO.png',
+  googleAds: '/Google Ads.png',
+  contact: '/Contact.png',
+}
+
 export const PHONE = '07867 205377'
 export const PHONE_HREF = 'tel:07867205377'
 export const EMAIL = 'contact@allsetdigitalsolutions.com'
@@ -168,9 +176,9 @@ export const testimonials = [
 ]
 
 export const homeStats = [
-  { value: '9+', label: 'Years of combined experience' },
-  { value: '35%', label: 'Growth focused' },
-  { value: '2 days', label: 'Average build' },
+  { value: '25+', label: '25 years of combined experience' },
+  { value: '100%', label: 'Coded' },
+  { value: '7 days', label: 'Average build' },
   { value: '0', label: 'Hidden fees' },
 ]
 

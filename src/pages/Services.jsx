@@ -4,14 +4,23 @@ import QuoteSection from '../components/QuoteSection'
 import Button from '../components/Button'
 import BackgroundBlobs from '../components/BackgroundBlobs'
 import { CheckIcon, FeatureIcon, WarningIcon } from '../components/Icons'
-import { servicesList, supportIssues, trades } from '../data/siteData'
+import { pageBanners, servicesList, supportIssues, trades } from '../data/siteData'
 
 export default function Services() {
   return (
     <>
       <PageHero
+        banner={pageBanners.services}
         label="Our Services"
-        title="Bespoke digital services for UK small businesses"
+        lines={[
+          { text: 'Bespoke digital services' },
+          {
+            parts: [
+              { text: 'for UK ' },
+              { text: 'small businesses', className: 'text-emerald-400' },
+            ],
+          },
+        ]}
         description="Websites, SEO, hosting and support — everything you need to get found online and win more enquiries, built by a team that actually answers the phone."
         cta="Get My Free Quote"
         ctaTo="/contact"

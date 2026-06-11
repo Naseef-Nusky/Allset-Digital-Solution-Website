@@ -1,33 +1,21 @@
-import BackgroundBlobs from '../components/BackgroundBlobs'
+import PageHero from '../components/PageHero'
 import SectionLabel from '../components/SectionLabel'
 import QuoteForm from '../components/QuoteForm'
-import Button from '../components/Button'
 import { MailIcon, MapPinIcon, PhoneIcon } from '../components/Icons'
-import { EMAIL, EMAIL_HREF, PHONE, PHONE_HREF } from '../data/siteData'
+import { EMAIL, EMAIL_HREF, pageBanners, PHONE, PHONE_HREF } from '../data/siteData'
 
 export default function Contact() {
   return (
     <>
-      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
-        <BackgroundBlobs />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <SectionLabel className="mb-4">Contact</SectionLabel>
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-              Get your free quote
-            </h1>
-            <p className="mt-5 text-lg text-slate-600">
-              Tell us what you need. We reply within 24 hours with honest advice and a clear plan.
-            </p>
-            <div className="mt-8">
-              <Button href={PHONE_HREF} variant="outline">
-                <PhoneIcon className="h-4 w-4" />
-                Call {PHONE}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        banner={pageBanners.contact}
+        label="Contact"
+        title="Get your free quote"
+        description="Tell us what you need. We reply within 24 hours with honest advice and a clear plan."
+        cta={`Call ${PHONE}`}
+        ctaHref={PHONE_HREF}
+        showArrow={false}
+      />
 
       <section className="bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

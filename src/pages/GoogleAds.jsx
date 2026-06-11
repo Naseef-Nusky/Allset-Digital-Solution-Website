@@ -1,14 +1,24 @@
 import PageHero from '../components/PageHero'
 import QuoteSection from '../components/QuoteSection'
 import { CheckIcon } from '../components/Icons'
-import { googleAdsFeatures } from '../data/siteData'
+import { googleAdsFeatures, pageBanners } from '../data/siteData'
 
 export default function GoogleAds() {
   return (
     <>
       <PageHero
+        banner={pageBanners.googleAds}
         label="Google Ads Management"
-        title="Turn Google clicks into paying customers"
+        parts={[
+          { text: 'Turn ' },
+          { text: 'G', className: 'text-[#4285F4]' },
+          { text: 'o', className: 'text-[#EA4335]' },
+          { text: 'o', className: 'text-[#FBBC05]' },
+          { text: 'g', className: 'text-[#4285F4]' },
+          { text: 'l', className: 'text-[#34A853]' },
+          { text: 'e', className: 'text-[#EA4335]' },
+          { text: ' clicks into paying customers' },
+        ]}
         description="ROI-focused Google Ads campaigns built, launched and optimised weekly for UK small businesses."
         cta="Get My Free Quote"
         ctaTo="/contact"

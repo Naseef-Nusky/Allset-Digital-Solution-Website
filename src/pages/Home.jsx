@@ -1,3 +1,5 @@
+import AnimatedStats from '../components/AnimatedStats'
+import AnimatedTitle from '../components/AnimatedTitle'
 import Button from '../components/Button'
 import SectionLabel from '../components/SectionLabel'
 import QuoteSection from '../components/QuoteSection'
@@ -8,29 +10,41 @@ import { homeStats, industries } from '../data/siteData'
 export default function Home() {
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden">
-        <img
-          src="/hero.jpeg"
-          alt="Modern office workspace"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/65" />
-        <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Modern websites{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-sky-300 bg-clip-text text-transparent">
-              that grow with you
-            </span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-200">
+      <section className="relative flex min-h-screen items-center justify-center">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="/hero.jpeg"
+            alt="Modern office workspace"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-900/65" />
+        </div>
+        <div className="relative mx-auto w-full max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
+          <AnimatedTitle
+            className="font-sans text-4xl font-bold leading-snug tracking-tight text-white sm:text-5xl sm:leading-tight lg:text-6xl"
+            lines={[
+              { text: 'Modern websites' },
+              { text: 'that grow with you', className: 'text-emerald-400' },
+            ]}
+          />
+          <p className="mx-auto mt-5 max-w-2xl px-1 text-base leading-relaxed text-slate-200 sm:mt-6 sm:text-lg">
             We design, build and support coded websites for UK small businesses. No templates,
             no jargon, no surprise invoices.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button to="/contact" showArrow>
+          <div className="mt-10 flex flex-nowrap items-center justify-center gap-2 sm:gap-4">
+            <Button
+              to="/contact"
+              showArrow
+              animated
+              className="whitespace-nowrap px-4 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-sm"
+            >
               Start your project
             </Button>
-            <Button to="/services" variant="secondary">
+            <Button
+              to="/services"
+              variant="secondary"
+              className="whitespace-nowrap px-4 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-sm"
+            >
               Explore our services
             </Button>
           </div>
@@ -40,28 +54,16 @@ export default function Home() {
       <section className="bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <SectionLabel className="mb-4">What We Do</SectionLabel>
+            <SectionLabel className="mb-4">What we do</SectionLabel>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               Websites built around your <span className="text-emerald-600">business</span>
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              Bespoke, coded websites with SEO, copy and support included. Built for tradesmen,
-              salons, startups and local businesses across the UK.
+              Every site is written from scratch using the latest web standards. Fast, mobile first
+              and built to actually bring you customers.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {homeStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm"
-              >
-                <p className="text-3xl font-bold text-emerald-600">{stat.value}</p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+          <AnimatedStats stats={homeStats} />
         </div>
       </section>
 
