@@ -9,7 +9,7 @@ export default function About() {
     <>
       <PageHero
         banner={pageBanners.about}
-        label="About Us"
+        label="About us"
         title="Bespoke websites for UK small businesses"
         highlight="small businesses"
         description="Over 25 years combined experience building modern, mobile-friendly sites, coded, never templated, and fully supported."
@@ -24,23 +24,27 @@ export default function About() {
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-slate-600">
               <p>
-                We started All Set Digital Solutions because small businesses deserve better than
-                template websites and agencies that disappear after launch.
+                All Set Digital Solutions has over 25 years combined experience designing and
+                building websites. In that time we have helped tradesmen, beauty salons, barbers,
+                builders, plumbers and brand-new start-ups across the UK get online with sites that
+                bring in real enquiries.
               </p>
               <p>
-                Every site we build is hand-crafted from scratch — no page builders, no themes with
-                your logo dropped in. Mobile-friendly, fast loading and built to bring in enquiries.
+                We specialise in modern, mobile-friendly websites built with the most up-to-date
+                coding standards. Every project is hand-crafted from scratch, we never use templates
+                and we never cut corners. Your site is yours: customised to your brand, your
+                customers and the way you want to be found.
               </p>
               <p>
-                We stay around after go-live with honest support, clear pricing and a team that
-                actually picks up the phone.
+                And once your site is live, we stay with you. Full support is part of the package, no
+                surprise invoices, no awkward conversations about extra fees.
               </p>
             </div>
           </div>
           <div className="overflow-hidden rounded-3xl shadow-xl">
             <img
-              src={pageBanners.googleAds}
-              alt="All Set Digital Solutions team at work"
+              src={pageBanners.about}
+              alt="A modern UK web design workspace with laptop, notebook and a cup of tea"
               className="h-full w-full object-cover"
             />
           </div>
@@ -55,7 +59,7 @@ export default function About() {
                 key={stat.label}
                 className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm"
               >
-                <p className="text-3xl font-bold text-slate-900">{stat.value}</p>
+                <p className="text-3xl font-bold text-emerald-600">{stat.value}</p>
                 <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   {stat.label}
                 </p>
@@ -73,8 +77,10 @@ export default function About() {
               Coded, modern and built to last
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              We write every line of code ourselves. That means faster sites, better SEO and
-              complete control over how your business looks online.
+              Most cheap website builders hand you a recycled template and walk away. We do the
+              opposite. Every site is written from the ground up using the latest standards in HTML,
+              CSS, JavaScript and modern frameworks, so it loads quickly, ranks well and feels
+              genuinely yours.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">

@@ -73,13 +73,22 @@ export default function PageHero({
           </p>
         )}
         {(cta || secondaryCta) && (
-          <div className={`mt-5 flex flex-wrap gap-3 sm:mt-6 sm:gap-4 ${centered ? 'justify-center' : ''}`}>
+          <div
+            className={`mt-5 flex gap-2 sm:mt-6 sm:gap-4 ${
+              secondaryCta ? 'flex-nowrap items-stretch' : 'flex-wrap'
+            } ${centered ? 'justify-center' : ''}`}
+          >
             {cta && (
               <Button
                 to={ctaHref ? undefined : ctaTo}
                 href={ctaHref}
                 variant={hasBanner && ctaHref ? 'secondary' : ctaVariant}
-                showArrow={showArrow && !ctaHref}
+                showArrow={showArrow && !ctaHref && !secondaryCta}
+                className={
+                  secondaryCta
+                    ? 'flex-1 whitespace-nowrap px-2.5 py-2.5 text-[11px] min-[400px]:text-xs sm:flex-none sm:px-6 sm:py-3 sm:text-sm'
+                    : ''
+                }
               >
                 {cta}
               </Button>
@@ -88,6 +97,7 @@ export default function PageHero({
               <Button
                 to={secondaryCtaTo}
                 variant={hasBanner ? 'secondary' : 'outline'}
+                className="flex-1 whitespace-nowrap px-2.5 py-2.5 text-[11px] min-[400px]:text-xs sm:flex-none sm:px-6 sm:py-3 sm:text-sm"
               >
                 {secondaryCta}
               </Button>

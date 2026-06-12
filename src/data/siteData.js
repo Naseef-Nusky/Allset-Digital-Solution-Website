@@ -37,13 +37,59 @@ export const industries = [
 
 export const trades = [
   'Plumbers and heating engineers',
-  'Electricians',
-  'Builders and contractors',
-  'Roofers and joiners',
+  'Electricians and electrical contractors',
+  'Builders, roofers and labourers',
+  'Joiners, carpenters and decorators',
   'Landscapers and gardeners',
-  'Beauty salons and barbers',
-  'Restaurants and takeaways',
-  'Local shops and startups',
+  'Beauty salons, barbers and nail technicians',
+  'Cleaners, removal firms and local services',
+  'Cafés, takeaways and independent shops',
+  'Start-ups and brand-new UK businesses',
+]
+
+export const serviceCards = [
+  {
+    title: 'Website Design',
+    description: 'Bespoke, coded websites built from scratch for UK small businesses.',
+    to: '/services/website-design',
+    icon: 'globe',
+  },
+  {
+    title: 'Landing Pages',
+    description: 'High-converting landing pages that turn clicks into customers.',
+    to: '/services/landing-pages',
+    icon: 'target',
+  },
+  {
+    title: 'SEO',
+    description: 'Local SEO to help your business climb Google rankings.',
+    to: '/services/seo',
+    icon: 'search',
+  },
+  {
+    title: 'Google Ads',
+    description: 'Paid search campaigns that bring instant enquiries.',
+    to: '/services/google-ads',
+    icon: 'megaphone',
+  },
+  {
+    title: 'Branding & Logo Design',
+    description: 'Professional logos, brand identity and design that makes you stand out.',
+    to: '/contact',
+    icon: 'document',
+  },
+  {
+    title: 'Other Services',
+    description: 'Social media, email setup, ongoing support and more.',
+    to: '/contact',
+    icon: 'support',
+  },
+]
+
+export const whyWorkWithUs = [
+  { icon: 'code', title: '100% bespoke code' },
+  { icon: 'support', title: 'Full support, no extra fees' },
+  { icon: 'speed', title: 'Around 7 day turnaround' },
 ]
 
 export const supportIssues = [
@@ -183,10 +229,10 @@ export const steps = [
 ]
 
 export const stats = [
-  { value: '9+', label: 'Years of combined experience' },
-  { value: '35%', label: 'Bespoke, no templates' },
+  { value: '25+', label: '25 years of combined experience' },
+  { value: '100%', label: 'Bespoke, no templates' },
   { value: '£200', label: 'Starting price' },
-  { value: '2 days', label: 'Average turnaround' },
+  { value: '7 days', label: 'Average turnaround' },
 ]
 
 export const testimonials = [
@@ -232,39 +278,42 @@ export const homeStats = [
 export const differentiators = [
   {
     title: 'No templates. Ever.',
-    description: 'Every site is coded from scratch for your business, not a theme with your logo dropped in.',
+    description:
+      'Every site is coded from scratch using the most up-to-date web standards. You get a website that is truly yours, not a recycled theme stretched to fit.',
     icon: 'code',
   },
   {
     title: 'Fully customisable',
-    description: 'Your colours, your content, your layout. Change anything without fighting a page builder.',
+    description:
+      'Colours, layout, typography, content sections, everything is built around your brand and the way your customers actually use your site.',
     icon: 'settings',
   },
   {
-    title: 'Full support, everywhere',
-    description: 'Phone, email and ongoing help after launch. No ticket queues or chatbots.',
+    title: 'Full support, no extra fees',
+    description:
+      'Updates, tweaks and friendly advice come as standard. We do not nickel-and-dime you for small changes after launch.',
     icon: 'headset',
   },
   {
     title: 'Modern, mobile-first builds',
-    description: 'Fast loading, secure and designed to work perfectly on phones where your customers search.',
+    description:
+      'Lightning-fast load times, perfect on every screen size and built with clean modern code so your site stays quick and reliable for years.',
     icon: 'mobile',
   },
 ]
 
 export const beliefs = [
   'Small businesses deserve great websites without agency prices.',
-  'Honest quotes with no hidden fees or surprise invoices.',
-  'We pick up the phone and reply within 24 hours.',
-  'Your website should bring enquiries, not just look pretty.',
-  'Ongoing support should be included, not sold as an add-on.',
+  'Honesty over hype, no hidden fees, no jargon, no surprises.',
+  'Every site should bring in enquiries, not just sit there looking pretty.',
+  'Fast turnaround, most sites are live in around seven days.',
+  'Trusted by small businesses across the UK, from local tradesmen to growing salons and start-ups.',
 ]
 
 export const servicesList = [
-  'Bespoke Web Design',
-  'Landing Page Design',
-  'Reliable Hosting',
-  'Domain Management',
+  'Bespoke web design',
+  'Website redesigns',
+  'Emergency support',
   'Local SEO',
-  'Logo & Branding',
+  'Logo & branding',
 ]

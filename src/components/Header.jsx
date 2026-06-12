@@ -19,7 +19,7 @@ export default function Header() {
           <img
             src="/logo.png"
             alt="All Set Digital Solutions"
-            className="h-11 w-auto sm:h-14 lg:h-16"
+            className="h-14 w-auto lg:h-16"
           />
         </Link>
 

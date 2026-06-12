@@ -11,7 +11,7 @@ export default function Footer() {
           <Link to="/privacy-policy" className="transition hover:text-emerald-600">
             Privacy Policy
           </Link>
-          <p>© 2024 All Set Digital Solutions. All rights reserved.</p>
+          <p>© 2026 All Set Digital Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
