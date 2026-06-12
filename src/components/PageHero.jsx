@@ -25,7 +25,9 @@ export default function PageHero({
   return (
     <section
       className={`relative overflow-hidden ${
-        hasBanner ? 'flex min-h-[42vh] items-center sm:min-h-[38vh]' : 'bg-white py-16 sm:py-20'
+        hasBanner
+          ? 'flex max-h-[calc(100dvh-4.5rem)] min-h-[36vh] items-center sm:min-h-[40vh]'
+          : 'bg-white py-16 sm:py-20'
       }`}
     >
       {hasBanner ? (
@@ -42,7 +44,7 @@ export default function PageHero({
       )}
 
       <div
-        className={`relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-12 lg:px-8 ${
+        className={`relative mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 ${
           centered ? 'text-center' : ''
         }`}
       >
@@ -57,13 +59,13 @@ export default function PageHero({
           lines={lines}
           parts={parts}
           highlightClassName={hasBanner ? 'text-emerald-400' : 'text-emerald-600'}
-          className={`font-sans text-4xl font-bold leading-snug tracking-tight sm:text-4xl sm:leading-tight md:text-5xl lg:text-6xl ${
+          className={`text-balance font-hero text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl sm:leading-tight md:text-5xl lg:text-6xl ${
             hasBanner ? 'text-white' : 'text-slate-900'
           }`}
         />
         {description && (
           <p
-            className={`mt-4 max-w-3xl text-base leading-relaxed sm:mt-5 sm:text-lg ${
+            className={`mt-3 max-w-3xl text-sm leading-relaxed sm:mt-4 sm:text-base md:text-lg ${
               hasBanner ? 'text-slate-200' : 'text-slate-600'
             } ${centered ? 'mx-auto' : ''}`}
           >
@@ -71,7 +73,7 @@ export default function PageHero({
           </p>
         )}
         {(cta || secondaryCta) && (
-          <div className={`mt-8 flex flex-wrap gap-4 ${centered ? 'justify-center' : ''}`}>
+          <div className={`mt-5 flex flex-wrap gap-3 sm:mt-6 sm:gap-4 ${centered ? 'justify-center' : ''}`}>
             {cta && (
               <Button
                 to={ctaHref ? undefined : ctaTo}

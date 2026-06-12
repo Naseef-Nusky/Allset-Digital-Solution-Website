@@ -5,12 +5,12 @@ import SectionLabel from '../components/SectionLabel'
 import QuoteSection from '../components/QuoteSection'
 import TestimonialsSection from '../components/TestimonialsSection'
 import { CheckIcon } from '../components/Icons'
-import { homeStats, industries } from '../data/siteData'
+import { homeStats, industries, pageBanners } from '../data/siteData'
 
 export default function Home() {
   return (
     <>
-      <section className="relative flex min-h-screen items-center justify-center">
+      <section className="relative flex max-h-[calc(100dvh-4.5rem)] min-h-[calc(100dvh-4.5rem)] items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/hero.jpeg"
@@ -19,14 +19,17 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-slate-900/65" />
         </div>
-        <div className="relative mx-auto w-full max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
-          <AnimatedTitle
-            className="font-sans text-4xl font-bold leading-snug tracking-tight text-white sm:text-5xl sm:leading-tight lg:text-6xl"
-            lines={[
-              { text: 'Modern websites' },
-              { text: 'that grow with you', className: 'text-emerald-400' },
-            ]}
-          />
+        <div className="relative mx-auto w-full max-w-4xl px-4 py-10 text-center sm:px-6 sm:py-16 lg:px-8">
+          <h1 className="text-balance font-hero text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl">
+            <AnimatedTitle
+              as="span"
+              className="block text-white"
+              lines={[{ text: 'Modern websites' }]}
+            />
+            <span className="block bg-gradient-to-r from-emerald-300 via-emerald-400 to-teal-300 bg-clip-text text-transparent">
+              that grow with you
+            </span>
+          </h1>
           <p className="mx-auto mt-5 max-w-2xl px-1 text-base leading-relaxed text-slate-200 sm:mt-6 sm:text-lg">
             We design, build and support coded websites for UK small businesses. No templates,
             no jargon, no surprise invoices.
@@ -75,23 +78,26 @@ export default function Home() {
               Built for UK <span className="text-emerald-600">Small Businesses</span>
             </h2>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-4 lg:grid-cols-4">
             {industries.map((industry) => (
-              <div
+              <a
                 key={industry.name}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md"
+                href="#quote"
+                className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:border-emerald-300 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 sm:rounded-2xl"
               >
-                <div className="aspect-[16/10] overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
                   <img
                     src={industry.image}
-                    alt={industry.name}
-                    className="h-full w-full object-cover"
+                    alt=""
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="px-4 py-3">
-                  <span className="text-sm font-semibold text-slate-800">{industry.name}</span>
+                <div className="px-2 py-2 text-center sm:px-4 sm:py-3">
+                  <span className="text-xs font-semibold text-slate-800 transition group-hover:text-emerald-600 sm:text-sm">
+                    {industry.name}
+                  </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -130,8 +136,8 @@ export default function Home() {
           </div>
           <div className="overflow-hidden rounded-3xl shadow-xl">
             <img
-              src="/hero.jpeg"
-              alt="Team working together"
+              src={pageBanners.team}
+              alt="All Set Digital Solutions team"
               className="h-full w-full object-cover"
             />
           </div>

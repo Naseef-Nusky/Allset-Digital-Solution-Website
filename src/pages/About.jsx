@@ -39,8 +39,8 @@ export default function About() {
           </div>
           <div className="overflow-hidden rounded-3xl shadow-xl">
             <img
-              src="/hero.jpeg"
-              alt="Workspace with laptop showing code"
+              src={pageBanners.googleAds}
+              alt="All Set Digital Solutions team at work"
               className="h-full w-full object-cover"
             />
           </div>
@@ -83,7 +83,7 @@ export default function About() {
                 key={item.title}
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                <div className="bg-brand-icon flex h-12 w-12 items-center justify-center rounded-2xl text-white">
                   <FeatureIcon name={item.icon} />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-slate-900">{item.title}</h3>

@@ -7,7 +7,9 @@ import Services from './pages/Services'
 import WebsiteDesign from './pages/WebsiteDesign'
 import SEO from './pages/SEO'
 import GoogleAds from './pages/GoogleAds'
+import LandingPages from './pages/LandingPages'
 import Contact from './pages/Contact'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 export default function App() {
   return (
@@ -19,9 +21,11 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
           <Route path="services/website-design" element={<WebsiteDesign />} />
+          <Route path="services/landing-pages" element={<LandingPages />} />
           <Route path="services/seo" element={<SEO />} />
           <Route path="services/google-ads" element={<GoogleAds />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -56,7 +56,7 @@ export default function Services() {
                 key={item.title}
                 className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                <div className="bg-brand-icon mx-auto flex h-12 w-12 items-center justify-center rounded-2xl text-white">
                   <FeatureIcon name={item.icon} />
                 </div>
                 <p className="mt-4 font-semibold text-slate-900">{item.title}</p>

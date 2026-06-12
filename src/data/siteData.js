@@ -4,6 +4,8 @@ export const pageBanners = {
   seo: '/SEO.png',
   googleAds: '/Google Ads.png',
   contact: '/Contact.png',
+  team: '/team.png',
+  landingPages: '/landing page.png',
 }
 
 export const PHONE = '07867 205377'
@@ -16,6 +18,7 @@ export const navLinks = [
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
   { label: 'Web Design', to: '/services/website-design' },
+  { label: 'Landing Pages', to: '/services/landing-pages' },
   { label: 'SEO', to: '/services/seo' },
   { label: 'Google Ads', to: '/services/google-ads' },
   { label: 'Contact', to: '/contact' },
@@ -68,6 +71,50 @@ export const googleAdsFeatures = [
   'Conversion-focused landing pages',
   'Weekly optimisation to drop cost per lead',
   'Clear monthly reporting in plain English',
+]
+
+export const landingPageFeatures = [
+  {
+    title: 'Built to Convert',
+    description: 'Every section designed to turn clicks into enquiries.',
+    icon: 'target',
+  },
+  {
+    title: 'Live in 48 Hours',
+    description: 'Fast turnaround so your ads can start earning sooner.',
+    icon: 'clock',
+  },
+  {
+    title: 'One Clear Goal',
+    description: 'No distractions — just one focused call-to-action.',
+    icon: 'focus',
+  },
+  {
+    title: 'Mobile Optimised',
+    description: 'Loads fast and looks great on every device.',
+    icon: 'mobile',
+  },
+  {
+    title: 'Ads Ready',
+    description: 'Perfectly paired with Google Ads and social campaigns.',
+    icon: 'megaphone',
+  },
+  {
+    title: 'Copy Included',
+    description: 'Persuasive copywriting written by us, for your audience.',
+    icon: 'document',
+  },
+]
+
+export const landingPageIncludes = [
+  'Conversion-focused design',
+  'Mobile-first and lightning fast',
+  'Lead capture form with email alerts',
+  'A/B test friendly structure',
+  'Persuasive copy written for you',
+  'Clear call-to-action above the fold',
+  'Google Ads & Meta Ads ready',
+  'Analytics and tracking set up',
 ]
 
 export const websiteIncludes = [
@@ -215,6 +262,7 @@ export const beliefs = [
 
 export const servicesList = [
   'Bespoke Web Design',
+  'Landing Page Design',
   'Reliable Hosting',
   'Domain Management',
   'Local SEO',

@@ -23,7 +23,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden min-w-0 items-center gap-0.5 lg:flex xl:gap-1">
           {navLinks.map((link) => {
             const isActive = isNavLinkActive(pathname, link.to)
 
@@ -32,7 +32,7 @@ export default function Header() {
                 key={link.to}
                 to={link.to}
                 end
-                className={`rounded-full px-3 py-2 text-sm font-medium transition ${
+                className={`rounded-full px-2 py-2 text-xs font-medium transition xl:px-3 xl:text-sm ${
                   isActive ? 'text-emerald-600' : 'text-slate-600 hover:text-emerald-600'
                 }`}
               >

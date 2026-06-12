@@ -4,7 +4,7 @@ import BackgroundBlobs from './BackgroundBlobs'
 
 export default function QuoteSection({ title = 'Get your free quote' }) {
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-20">
+    <section id="quote" className="relative overflow-hidden scroll-mt-24 bg-white py-16 sm:py-20">
       <BackgroundBlobs />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
