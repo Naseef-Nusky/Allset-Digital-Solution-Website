@@ -130,10 +130,12 @@ export default function Services() {
             </p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
-            {trades.map((trade) => (
+            {trades.map((trade, index) => (
               <div
                 key={trade}
-                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm"
+                className={`flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm ${
+                  index === trades.length - 1 ? 'mx-auto w-full max-w-md sm:col-span-2' : ''
+                }`}
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white">
                   <CheckIcon className="h-4 w-4" />
@@ -157,7 +159,7 @@ export default function Services() {
                 Website down or lost your developer?
               </h2>
               <p className="mt-3 text-base leading-relaxed text-slate-600">
-                We offer fast, no-nonsense help to get you back online — often the same day.
+                We offer fast, no nonsense help to get you back online, often the same day.
               </p>
             </div>
             <div className="flex w-full flex-nowrap items-stretch gap-2 sm:w-auto sm:gap-3">

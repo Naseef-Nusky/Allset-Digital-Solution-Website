@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero'
 import SectionLabel from '../components/SectionLabel'
 import StepsSection from '../components/StepsSection'
+import AnimatedStats from '../components/AnimatedStats'
 import { CheckIcon, FeatureIcon } from '../components/Icons'
 import { beliefs, differentiators, pageBanners, stats } from '../data/siteData'
 
@@ -53,19 +54,7 @@ export default function About() {
 
       <section className="bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm"
-              >
-                <p className="text-3xl font-bold text-emerald-600">{stat.value}</p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+          <AnimatedStats stats={stats} className="" />
         </div>
       </section>
 

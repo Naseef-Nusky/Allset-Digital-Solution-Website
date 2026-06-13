@@ -1,17 +1,19 @@
 export const pageBanners = {
   about: '/about.png',
   services: '/services.png',
+  webDesign: '/web-design.jpeg',
   seo: '/SEO.png',
-  googleAds: '/Google Ads.png',
+  googleAds: '/google-adds.jpeg',
   contact: '/Contact.png',
   team: '/team.png',
   landingPages: '/landing page.png',
 }
 
-export const PHONE = '07867 205377'
-export const PHONE_HREF = 'tel:07867205377'
-export const EMAIL = 'contact@allsetdigitalsolutions.com'
+export const PHONE = '+44 7867 205377'
+export const PHONE_HREF = 'tel:+447867205377'
+export const EMAIL = 'Contact@Allsetdigitalsolutions.com'
 export const EMAIL_HREF = 'mailto:contact@allsetdigitalsolutions.com'
+export const ADDRESS = 'The Townhouse, 114 – 116 Fore Street, Hertford, SG14 1AJ'
 
 export const navLinks = [
   { label: 'Home', to: '/' },
@@ -238,33 +240,33 @@ export const stats = [
 export const testimonials = [
   {
     quote:
-      'All Set built our website in just 5 days and we had 4 new enquiries in the first week. Honest pricing and they actually pick up the phone.',
-    name: 'Sarah Mitchell',
-    role: 'Owner, Mitchell Plumbing',
+      'All Set built our website in just 6 days and we had 4 new enquiries in the first week. Honest pricing and they actually pick up the phone.',
+    name: 'Sarah M.',
+    role: 'Beauty Salon Owner',
     location: 'Manchester',
     initials: 'SM',
+    color: 'bg-rose-500',
+    industry: 'Beauty salon',
+  },
+  {
+    quote:
+      'Finally a web designer who speaks plain English. Got my plumbing business online for £300 and I am already getting calls from Google.',
+    name: 'Dave T.',
+    role: 'Plumber',
+    location: 'Birmingham',
+    initials: 'DT',
     color: 'bg-sky-600',
     industry: 'Plumber',
   },
   {
     quote:
-      'We were ranking on page three for months. Within eight weeks we were on page one for three local searches. The monthly reports are clear and easy to understand.',
-    name: 'James Clarke',
-    role: 'Director, Clarke Electrical',
-    location: 'Birmingham',
-    initials: 'JC',
+      'The SEO work has been brilliant. We went from page 5 to page 1 for our main keywords within 3 months. Highly recommend.',
+    name: 'James R.',
+    role: 'Electrician',
+    location: 'Leeds',
+    initials: 'JR',
     color: 'bg-amber-600',
     industry: 'Electrician',
-  },
-  {
-    quote:
-      'No templates, no jargon — just a clean site that looks great on phones. Our booking enquiries doubled after launch and support has been brilliant.',
-    name: 'Emma Walsh',
-    role: 'Owner, Walsh Beauty Salon',
-    location: 'Leeds',
-    initials: 'EW',
-    color: 'bg-rose-500',
-    industry: 'Beauty salon',
   },
 ]
 

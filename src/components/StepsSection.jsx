@@ -14,12 +14,12 @@ export default function StepsSection({ title = 'Live in 3 simple steps' }) {
           {steps.map((item) => (
             <div
               key={item.step}
-              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm"
             >
               <span className="inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
                 Step {item.step}
               </span>
-              <div className="bg-brand-icon mt-5 flex h-12 w-12 items-center justify-center rounded-2xl text-white">
+              <div className="bg-brand-icon mx-auto mt-5 flex h-12 w-12 items-center justify-center rounded-2xl text-white">
                 <FeatureIcon name={item.icon} className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-semibold text-slate-900">{item.title}</h3>

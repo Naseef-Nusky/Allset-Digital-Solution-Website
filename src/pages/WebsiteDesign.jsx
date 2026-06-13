@@ -9,13 +9,13 @@ export default function WebsiteDesign() {
   return (
     <>
       <PageHero
-        banner={pageBanners.services}
+        banner={pageBanners.webDesign}
         label="Website Design"
         lines={[
-          { text: 'Affordable websites for UK' },
+          { text: 'Affordable websites for' },
           {
             parts: [
-              { text: 'small businesses ', className: 'text-emerald-400' },
+              { text: 'UK small businesses ', className: 'text-emerald-400' },
               { text: 'from ' },
               { text: '£200', className: 'text-emerald-400' },
             ],

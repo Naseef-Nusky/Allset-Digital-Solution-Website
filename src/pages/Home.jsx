@@ -15,9 +15,10 @@ export default function Home() {
           <img
             src="/hero.jpeg"
             alt="Modern office workspace"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover brightness-[0.88]"
           />
-          <div className="absolute inset-0 bg-slate-900/65" />
+          <div className="hero-image-overlay absolute inset-0" />
+          <div className="hero-image-fade pointer-events-none absolute inset-0" aria-hidden="true" />
         </div>
         <div className="relative mx-auto w-full max-w-4xl px-4 py-10 text-center sm:px-6 sm:py-16 lg:px-8">
           <h1 className="text-balance font-hero text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl sm:leading-tight md:text-6xl lg:text-7xl">
@@ -26,9 +27,7 @@ export default function Home() {
               className="block text-white"
               lines={[{ text: 'Modern websites' }]}
             />
-            <span className="block bg-gradient-to-r from-emerald-300 via-emerald-400 to-teal-300 bg-clip-text text-transparent">
-              that grow with you
-            </span>
+            <span className="hero-gradient-text block">that grow with you</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl px-1 text-base leading-relaxed text-slate-200 sm:mt-6 sm:text-lg">
             We design, build and support coded websites for UK small businesses. No templates,
@@ -54,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-16 sm:py-20">
+      <section id="what-we-do" className="scroll-mt-24 bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <SectionLabel className="mb-4">What we do</SectionLabel>

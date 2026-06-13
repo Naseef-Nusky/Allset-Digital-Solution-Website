@@ -2,7 +2,7 @@ import PageHero from '../components/PageHero'
 import SectionLabel from '../components/SectionLabel'
 import QuoteForm from '../components/QuoteForm'
 import { MailIcon, MapPinIcon, PhoneIcon } from '../components/Icons'
-import { EMAIL, EMAIL_HREF, pageBanners, PHONE, PHONE_HREF } from '../data/siteData'
+import { EMAIL, EMAIL_HREF, pageBanners, PHONE, PHONE_HREF, ADDRESS } from '../data/siteData'
 
 export default function Contact() {
   return (
@@ -55,7 +55,7 @@ export default function Contact() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
                   <MapPinIcon />
                 </span>
-                <span className="font-medium">Serving small businesses across the UK</span>
+                <span className="font-medium">{ADDRESS}</span>
               </li>
             </ul>
           </div>
