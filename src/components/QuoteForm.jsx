@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { SendIcon } from './Icons'
+import { submitContactForm } from '../utils/submitContactForm'
 
 const initialValues = {
   name: '',
@@ -14,6 +15,12 @@ const initialErrors = {
   phone: '',
   message: '',
 }
+
+const formSuccessTitle = 'Thank you for your submission!'
+const formSuccessMessage =
+  'A member of our team will be in contact shortly to discuss your project and get you All Set!'
+const formSubmitError =
+  'Sorry, something went wrong. Please try again or call us directly.'
 
 function validate(values) {
   const errors = { ...initialErrors }
@@ -64,33 +71,64 @@ const inputClass = (hasError) =>
       : 'border-slate-200 focus:border-emerald-400 focus:ring-emerald-100'
   }`
 
-export default function QuoteForm({ className = '' }) {
+export default function QuoteForm({ className = '', source = 'Website' }) {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState(initialErrors)
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   function handleChange(event) {
     const { name, value } = event.target
     setValues((current) => ({ ...current, [name]: value }))
 
-    if (submitted) {
-      setErrors(validate({ ...values, [name]: value }))
+    if (errors[name]) {
+      setErrors((current) => ({ ...current, [name]: '' }))
     }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
     const nextErrors = validate(values)
     setErrors(nextErrors)
-    setSubmitted(true)
 
     if (Object.values(nextErrors).some(Boolean)) {
       return
     }
 
-    setSubmitted(false)
-    setValues(initialValues)
-    setErrors(initialErrors)
+    setSubmitError('')
+    setIsSubmitting(true)
+
+    try {
+      await submitContactForm({
+        ...values,
+        source,
+      })
+      setSubmitted(true)
+      setValues(initialValues)
+      setErrors(initialErrors)
+    } catch (error) {
+      if (error.errors) {
+        setErrors((current) => ({ ...current, ...error.errors }))
+      } else {
+        setSubmitError(error.message || formSubmitError)
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  if (submitted) {
+    return (
+      <div
+        className={`rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-xl shadow-slate-200/50 sm:p-8 ${className}`}
+      >
+        <p className="text-xl font-bold text-slate-900 sm:text-2xl">{formSuccessTitle}</p>
+        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+          {formSuccessMessage}
+        </p>
+      </div>
+    )
   }
 
   return (
@@ -159,11 +197,17 @@ export default function QuoteForm({ className = '' }) {
 
       <button
         type="submit"
-        className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-emerald-600"
+        disabled={isSubmitting}
+        className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-70"
       >
         <SendIcon />
-        Get My Free Quote
+        {isSubmitting ? 'Sending...' : 'Get My Free Quote'}
       </button>
+      {submitError && (
+        <p className="mt-4 text-center text-sm text-rose-600" role="alert">
+          {submitError}
+        </p>
+      )}
       <p className="mt-4 text-center text-xs text-slate-500">
         We&apos;ll never share your details. Reply within 24 hours.
       </p>
