@@ -11,7 +11,7 @@ export const pageBanners = {
 
 export const PHONE = '+44 7867 205377'
 export const PHONE_HREF = 'tel:+447867205377'
-export const EMAIL = 'Contact@Allsetdigitalsolutions.com'
+export const EMAIL = 'contact@allsetdigitalsolutions.com'
 export const EMAIL_HREF = 'mailto:contact@allsetdigitalsolutions.com'
 export const ADDRESS = 'The Townhouse, 114 – 116 Fore Street, Hertford, SG14 1AJ'
 
